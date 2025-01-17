@@ -1,22 +1,8 @@
-import './App.css';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import UseEffectComponent from './components/useEffect.tsx'; // Renombrado para evitar conflictos
+import "./App.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/useEffect">useEffect</Link>
-          </li>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path="/useEffect" element={<UseEffectComponent />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <div>hola mundo</div>;
 }
 
 export default App;
