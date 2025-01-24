@@ -1,7 +1,13 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+/**
+ * COMPONENTES
+ * */
 import UseEffect from "./components/useEffect.tsx";
 import UseEffectExcersice from "./excersice/UseEffectExcersice.tsx";
+import CustomHook from './components/CustomHook.tsx';
+import CustomHookExercise from './excersice/CustomHookExercise.tsx';
 
 function App() {
   return (
@@ -13,7 +19,7 @@ function App() {
             <li>
               <Link
                 to="/use_state"
-                className="block py-2 px-4 hover:bg-gray-600 font-[helvetica]"
+                className="block py-2 px-4 hover:bg-gray-600 font-[Hack Nerd Font]"
               >
                 Lección 1: useState
               </Link>
@@ -21,9 +27,17 @@ function App() {
             <li>
               <Link
                 to="/use_effect"
-                className="block py-2 px-4 hover:bg-gray-600 font-[helvetica]"
+                className="block py-2 px-4 hover:bg-gray-600 font-[Hack Nerd Font]"
               >
                 Lección 2: useEffect
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/custom_hook"
+                className="block py-2 px-4 hover:bg-gray-600 font-[Hack Nerd Font]"
+              >
+                Lección 3: customs hooks
               </Link>
             </li>
           </ul>
@@ -34,6 +48,8 @@ function App() {
           <Routes>
             <Route path="/use_effect" element={<UseEffect />} />
             <Route path="/dev/use_effect" element={<UseEffectExcersice />} />
+            <Route path="/custom_hook" element={<CustomHook />}/>
+            <Route path="/dev/custom_hook" element={<CustomHookExercise />}/>
           </Routes>
         </div>
       </div>

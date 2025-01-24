@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 function UseEffectExcersice() {
   const [data, setData] = useState([]);
   const [error, setError] = useState('');
-   const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const fetchData = async () => {
      setLoading(true)
     try {
-      let res = await fetch("https://api.example.com/data", {
+      let res = await fetch("http://localhost:3000/api/data", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
@@ -37,7 +37,6 @@ function UseEffectExcersice() {
   return (
      <div>
       {error && <p>{error}</p>}
-      /**para poder utilizar el data que se ha guardado sin el error Object object podemos:*/
          <p>{JSON.stringify(data)}</p>
      </div>
   )  
